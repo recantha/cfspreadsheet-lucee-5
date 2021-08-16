@@ -1925,7 +1925,8 @@
 		<cfset Local.cell = initializeCell( row=arguments.row, column=arguments.column ) />
 
 		<!--- TODO: need to worry about data types? doing everything as a string for now --->
-		<cfset Local.cell.setCellValue( JavaCast("string", arguments.cellValue) ) />
+		<!--- <cfset Local.cell.setCellValue( JavaCast("string", arguments.cellValue) ) /> --->
+		<cfset Local.cell.setCellValue(arguments.cellValue) />
 	</cffunction>
 
 	<cffunction name="setColumnWidth" access="public" output="false" returntype="void"

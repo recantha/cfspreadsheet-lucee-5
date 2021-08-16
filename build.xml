@@ -6,19 +6,19 @@
 	<property name="lar-name" value="cfc-archive-cfspreadsheet" />
 	<property name="lar-folder-to-zip" value="lar" />
 
-	<!--<target name="all" depends="clean, zip-lar, zip-lex"/>-->
-	<target name="all" depends="clean, zip-lex"/>
+	<target name="all" depends="clean, zip-lar, zip-lex"/>
+	<!-- <target name="all" depends="clean, zip-lex"/> -->
 
 	<target name="clean">
 		<echo message="Cleaning existing .lar and .lex files..." />
 		<delete file="${project-name}.lex" />
-		<!--<delete file="${archive-folder}${lar-name}.lar" />-->
+		<delete file="${archive-folder}${lar-name}.lar" />
 	</target>
 
-<!--	<target name="zip-lar">
+	<target name="zip-lar">
 		<echo message="Package cfc and mapping into .lar and put in archives folder" />
 		<zip destfile="${archive-folder}${lar-name}.lar" basedir="${lar-folder-to-zip}" />
-	</target>-->
+	</target>
 
 	<target name="zip-lex">
 		<echo message="Package the project into master .lex file." />
